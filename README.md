@@ -2,10 +2,10 @@
 Allison Glynn \
 *Updated: April 6, 2024*
 
-### Overview
+### Overview.
 This repository contains code, data, and figures pertaining to the project **"Comorbidity and exclusion of neurological disorders predicted by human gastrointestinal microbiome compositions"**. The contents of this repository detail (1) the code used for consolidating and cleaning 16S sequencing data into a pooled, informative dataset and (2) the code used to perform dimensionality reduction and clustering using a linear dimensionality reduction technique: principal component analysis (PCA), and a nonlinear dimensionality reduction technique that uses the reduced dataset produced by PCA: T-distributed Stochastic Neighbor Embedding (TSNE). The included data and code produce 2 SVGs of figures detailing the diagnoses in comparison to the first two principal components and to the two TSNE components. The pooled data consists of relative abundance 16S sequencing data from five neurological disorders: Autism spectrum disorder (ASD), Alzheimer's Disease (AD), Epilepsy, Multiple sclerosis (MS) and Parkinson's Disease (PD). The documentation for performing PCA in Python can be found [here](https://scikit-learn.org/stable/modules/generated/sklearn.decomposition.PCA.html). The documentation for performing TSNE analysis in Python can be found [here](https://scikit-learn.org/stable/modules/generated/sklearn.manifold.TSNE.html).
 
-### Data
+### Data.
 
 The data was accessed from the Data Repository for Human Gut Microbiota ([GMrepo](https://gmrepo.humangut.info/home)), described in [this paper](https://academic.oup.com/nar/article/50/D1/D777/6426060?login=true). Documentation for this repository can be found [here](https://evolgeniusteam.github.io/gmrepodocumentation/). GMrepo curates, consolidates, cleans, quality controls, and normalizes publicly available human 16S sequencing data from multiple human microbiome studies. It consolidates data and provides relative abundance measurements for each run accessed from each study, making it ideal for this project as all runs are quality controlled and converted from raw measurements to relative abundance, making them comparable across study and disorder. These runs are annotated by phenotype, and so we take all quality controlled runs for a given phenotype (one of the five described in the Overview) and consolidate them into a pooled dataset. 
 
@@ -13,7 +13,7 @@ The dataset used in this project for analysis is the pooled dataset, called "204
 
 The produced dataset can be used for dimensionality reduction with PCA followed by TSNE.
 
-### Folder structure
+### Folder structure.
 
 At a high level, the repository contains:
 * **Code:** This folder contains two ipynb notebooks, "20440_project_data_cleanup.ipynb," which can be used to clean the txt file run data found in the Data folder, and "TSNE_analysis.ipynb" which contains the code to perform PCA and TSNE analysis and produce two SVG figures of (1) the individual diagnoses along the first two principal components and (2) the individual diagnoses plotted against the two TSNE components. Note that the data cleanup folder is not necessary to produce the figures, as the cleaned dataset has already been provided in the "Data" folder. However, it is included for clarity. 
@@ -22,7 +22,7 @@ At a high level, the repository contains:
 * **.gitattributes:** Details how git should handle files in specific, default ways. Includes large file management.
 * **.gitignore:** Details which files git should ignore when committing and pushing (OS-generated files, jupyter checkpoints). 
 
-### Installation
+### Installation.
 
 All analysis was performed in Python 3.11.8. Code was stored and executed in Jupyter notebooks. In order to reproduce code, a jupyter notebook interface such as Anaconda is recommended for download of the code notebooks. The following packages and versions are needed to run this code:
 
